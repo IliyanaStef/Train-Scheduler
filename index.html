@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Railways to hell</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://bootswatch.com/3/journal/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header starts -->
+    <header>
+        <h1 class="text-center">RAILWAYS TO HELL</h1>
+    </header>  
+    <!-- Header ends  -->
+   <br>
+   <br>
+    <!-- Current time display -->
+	<h4 class="text-center typewriter">THE CURRENT TIME IS: <span id="currentTime"></span></h4>
+    <br>
+    <!-- Train info and add option starts -->
+	<div class="row card-row">
+        <!-- Train schedule -->
+		<div class="col-sm-12 col-lg-9">
+			<div class="card border-dark">
+				<div class="card-heading bg-dark">
+					<h4 class="card-title">Current Train Schedule</h4>
+				</div>
+				<div class="card-body">
+					<table class="table table-hover" id="train-schedule">
+						<thead>
+							<tr>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody id="new-train">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+        <!-- Add a train card -->
+		<div class="col-sm-12 col-lg-3">
+			<div class="card border-dark">
+				<div class="card-heading bg-dark">
+					<h4 class="card-title">Add Train</h4>
+				</div>
+				<div class="card-body">
+					<form>
+						<div class="form-group">
+							<label for="train-name-input">Train Name</label>
+							<input class="form-control form-control-sm" id="train-name-input" type="text"/>
+						</div>
+						<div class="form-group">
+							<label for="destination-input">Destination</label>
+							<input class="form-control form-control-sm" id="destination-input" type="text"/>
+						</div>
+						<div class="form-group">
+							<label for="train-time-input">First Train Time (HH:mm - military time)</label>
+							<input class="form-control form-control-sm" id="train-time-input" type="text"/>
+						</div>
+						<div class="form-group">
+							<label for="frequency-input">Frequency (min)</label>
+							<input class="form-control form-control-sm" id="frequency-input" type="text"/>
+						</div>
+
+						<button class="btn btn-dark" id="add-train-btn" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+        </div>
+        <!-- Add a train card ends -->
+	</div>
+    <!-- Train info and add option ends-->
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
