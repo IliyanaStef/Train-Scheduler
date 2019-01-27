@@ -16,12 +16,12 @@
 
 <body>
     <!-- Header starts -->
-    <header>
+    <header >
         <h1 class="text-center">RAILWAYS TO HELL</h1>
-    </header>  
+    </header>     
     <!-- Header ends  -->
-   <br>
-   <br>
+    <br>
+    <br>
     <!-- Current time display -->
 	<h4 class="text-center typewriter">THE CURRENT TIME IS: <span id="currentTime"></span></h4>
     <br>
@@ -33,7 +33,7 @@
 				<div class="card-heading bg-dark">
 					<h4 class="card-title">Current Train Schedule</h4>
 				</div>
-				<div class="card-body">
+				<div class="card-body table-responsive">
 					<table class="table table-hover" id="train-schedule">
 						<thead>
 							<tr>
@@ -67,14 +67,13 @@
 							<input class="form-control form-control-sm" id="destination-input" type="text"/>
 						</div>
 						<div class="form-group">
-							<label for="train-time-input">First Train Time (HH:mm - military time)</label>
+							<label for="train-time-input">First Train Time (HH:MM - military time)</label>
 							<input class="form-control form-control-sm" id="train-time-input" type="text"/>
 						</div>
 						<div class="form-group">
 							<label for="frequency-input">Frequency (min)</label>
 							<input class="form-control form-control-sm" id="frequency-input" type="text"/>
 						</div>
-
 						<button class="btn btn-dark" id="add-train-btn" type="submit">Submit</button>
 					</form>
 				</div>
